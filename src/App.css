@@ -5,6 +5,11 @@
     --bg-color: #ffffff;
     --card-bg: #f9f9f9;
     --border-color: #e0e0e0;
+    --github-bg: #24292e;
+    --github-hover: #1a1f23;
+    --star-button-bg: #f6f8fa;
+    --star-button-border: #d1d5da;
+    --star-button-hover: #e6ebf1;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
@@ -22,6 +27,9 @@
     --bg-color: #242424;
     --card-bg: #1a1a1a;
     --border-color: #333;
+    --star-button-bg: #21262d;
+    --star-button-border: #30363d;
+    --star-button-hover: #30363d;
 }
 
 #root {
@@ -109,6 +117,37 @@ button:focus-visible {
 .github-link:hover {
     background-color: #1a1f23;
     color: white;
+}
+
+.github-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.github-star-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: #f6a434;
+    color: #24292e;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.github-star-link:hover {
+    background-color: #f59f16;
+    color: #24292e;
+}
+
+.star-icon {
+    font-size: 1.5rem;
+    color: #24292e;
 }
 
 .github-icon {
@@ -231,11 +270,74 @@ select {
 }
 
 
-/* Inline container for the inline layout */
+/* Top GitHub banner */
 
-.inline-container {
-    margin-top: 2rem;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+.top-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    background-color: var(--github-bg);
+    color: white;
+    width: 100%;
+}
+
+.repo-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.repo-link:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.banner-icon {
+    font-size: 1.5rem;
+}
+
+.star-button {
+    display: flex;
+    align-items: stretch;
+    border-radius: 6px;
     overflow: hidden;
+    border: 1px solid var(--star-button-border);
+    text-decoration: none;
+}
+
+.star-button-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    background-color: var(--star-button-bg);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.star-count {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: var(--star-button-bg);
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-left: 1px solid var(--star-button-border);
+}
+
+.star-button:hover .star-button-content,
+.star-button:hover .star-count {
+    background-color: var(--star-button-hover);
+}
+
+.star-button-icon {
+    font-size: 1rem;
+    color: var(--text-color);
 }

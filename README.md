@@ -9,7 +9,7 @@ This demo showcases the following features of the react-keyhub package:
 - **Keyboard Shortcuts**: Various keyboard shortcuts for different actions
 - **Shortcut Sheet**: A modal that displays all available shortcuts
 - **Theming Support**: Light, dark, and auto themes for the shortcut sheet
-- **Layout Options**: Different layouts for the shortcut sheet (modal, sidebar, inline)
+- **Layout Options**: Different layouts for the shortcut sheet (modal, sidebar)
 
 ## Available Shortcuts
 
@@ -82,7 +82,7 @@ src/
 1. Use the keyboard shortcuts listed above to interact with the demo
 2. Click the "Show Shortcut Sheet" button to open the shortcut sheet
 3. Use the theme selector to switch between light, dark, and auto themes
-4. Use the layout selector to switch between modal, sidebar, and inline layouts
+4. Use the layout selector to switch between modal, sidebar layouts
 
 ## Deployment
 

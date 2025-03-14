@@ -3,7 +3,7 @@ import { Theme, Layout } from "../types/shortcuts";
 import reactLogo from "../assets/react.svg";
 import viteLogo from "/vite.svg";
 import { useShortcutManager } from "../hooks/useShortcutManager";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaStar } from "react-icons/fa";
 
 // Main component that demonstrates the shortcuts
 export function ShortcutDemo() {
@@ -35,10 +35,17 @@ export function ShortcutDemo() {
       <h1>React KeyHub Demo</h1>
 
       <div className="card">
-           <a href="https://github.com/keyhub-app/react-keyhub" target="_blank" rel="noreferrer" className="github-link">
-          <FaGithub className="github-icon" />
-          <span>React KeyHub</span>
-        </a>
+        <div className="github-container">
+          <a href="https://github.com/xenral/react-keyhub" target="_blank" rel="noreferrer" className="github-link">
+            <FaGithub className="github-icon" />
+            <span>React KeyHub</span>
+          </a>
+          <a href="https://github.com/xenral/react-keyhub/stargazers" target="_blank" rel="noreferrer" className="github-star-link">
+            <FaStar className="star-icon" />
+            <span>Star us on GitHub</span>
+          </a>
+        </div>
+        
         <h2>Counter: {count}</h2>
         <div className="button-group">
           <button onClick={incrementCount}>
@@ -91,7 +98,6 @@ export function ShortcutDemo() {
             >
               <option value="modal">Modal</option>
               <option value="sidebar">Sidebar</option>
-              <option value="inline">Inline</option>
             </select>
           </div>
 
