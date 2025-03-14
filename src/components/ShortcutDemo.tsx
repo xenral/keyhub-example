@@ -3,6 +3,7 @@ import { Theme, Layout } from "../types/shortcuts";
 import reactLogo from "../assets/react.svg";
 import viteLogo from "/vite.svg";
 import { useShortcutManager } from "../hooks/useShortcutManager";
+import { FaGithub } from "react-icons/fa";
 
 // Main component that demonstrates the shortcuts
 export function ShortcutDemo() {
@@ -28,18 +29,23 @@ export function ShortcutDemo() {
         <a href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-      </div>
 
+      </div>
+   
       <h1>React KeyHub Demo</h1>
 
       <div className="card">
+           <a href="https://github.com/keyhub-app/react-keyhub" target="_blank" rel="noreferrer" className="github-link">
+          <FaGithub className="github-icon" />
+          <span>React KeyHub</span>
+        </a>
         <h2>Counter: {count}</h2>
         <div className="button-group">
           <button onClick={incrementCount}>
-            Increment (Shift+↑)
+            Increment (Alt+↑)
           </button>
           <button onClick={decrementCount}>
-            Decrement (Ctrl+↓)
+            Decrement (Alt+↓)
           </button>
         </div>
 
@@ -47,19 +53,19 @@ export function ShortcutDemo() {
           <p>Available shortcuts:</p>
           <ul>
             <li>
-              <kbd>Ctrl</kbd> + <kbd>K</kbd>: Trigger custom action
+              <kbd>Shift</kbd> + <kbd>A</kbd>: Trigger custom action
             </li>
             <li>
-              <kbd>Ctrl</kbd> + <kbd>T</kbd>: Toggle theme
+              <kbd>Shift</kbd> + <kbd>T</kbd>: Toggle theme
             </li>
             <li>
-              <kbd>Shift</kbd> + <kbd>↑</kbd>: Increase counter
+              <kbd>Alt</kbd> + <kbd>↑</kbd>: Increase counter
             </li>
             <li>
-              <kbd>Ctrl</kbd> + <kbd>↓</kbd>: Decrease counter
+              <kbd>Alt</kbd> + <kbd>↓</kbd>: Decrease counter
             </li>
             <li>
-              <kbd>Ctrl</kbd> + <kbd>/</kbd>: Show shortcut sheet
+              <kbd>Shift</kbd> + <kbd>K</kbd>: Show shortcut sheet
             </li>
           </ul>
         </div>

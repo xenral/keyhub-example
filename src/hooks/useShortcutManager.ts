@@ -35,6 +35,10 @@ export function useShortcutManager({
     alert('Custom action triggered!');
   });
 
+  useShortcut('showShortcutSheet', () => {
+    setIsShortcutSheetOpen(true);
+  });
+
   const incrementCount = () => setCount((prev) => prev + 1);
   const decrementCount = () => setCount((prev) => Math.max(0, prev - 1));
   const toggleShortcutSheet = () => setIsShortcutSheetOpen((prev) => !prev);
