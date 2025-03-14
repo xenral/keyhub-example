@@ -1,0 +1,212 @@
+:root {
+    --primary-color: #646cff;
+    --primary-hover: #535bf2;
+    --text-color: #213547;
+    --bg-color: #ffffff;
+    --card-bg: #f9f9f9;
+    --border-color: #e0e0e0;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dark-theme {
+    --text-color: rgba(255, 255, 255, 0.87);
+    --bg-color: #242424;
+    --card-bg: #1a1a1a;
+    --border-color: #333;
+}
+
+a {
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover {
+    border-color: var(--primary-hover);
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+        animation: logo-spin infinite 20s linear;
+    }
+}
+
+.demo-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    padding: 2em;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 2em 0;
+    transition: background-color 0.3s;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.shortcut-info {
+    margin: 2rem 0;
+    text-align: left;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.shortcut-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.shortcut-info li {
+    margin: 0.5rem 0;
+}
+
+kbd {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    color: #333;
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.2em 0.4em;
+    white-space: nowrap;
+}
+
+.dark-theme kbd {
+    background-color: #333;
+    border-color: #555;
+    color: #f7f7f7;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.setting-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.show-shortcuts-btn {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+/* Inline container for the inline layout */
+
+.inline-container {
+    margin-top: 2rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
